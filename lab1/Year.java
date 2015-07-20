@@ -8,7 +8,16 @@ public class Year {
      *          false if year is not a leap year
      */
     static boolean isLeapYear(int year) {
-        return true;    // YOUR CODE HERE
+        //int year = 2000;
+        //String year_string = Integer.toString(year);
+        //String suffix = " is a leap year.";
+        if (year % 400 == 0) {
+            return true;
+        }
+        else if (year % 100 != 0 && year % 4 == 0) {
+            return true;
+        }
+        else return false;
     }
 
     /** Calls isLeapYear to print correct statement.
@@ -39,4 +48,3 @@ public class Year {
     }
 
 }
-
